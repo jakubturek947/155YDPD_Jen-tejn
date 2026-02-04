@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hrad Jenštejn – Virtuální portál</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <aside class="info-panel">
+    <div class="info-content">
+      <h1>Jenštejn</h1>
+      <p class="author">Autor projektu: <strong>Jakub Turek</strong></p>
+      
+      <h3>Historie hradu</h3>
+      <div class="history-text">
+        <p><strong>1341:</strong> Hrad založen Jenčíkem z Janovic jako unikátní vodní hrad v údolní poloze na pískovcové skále.</p>
+        <p><strong>14. stol:</strong> Největší rozkvět za Jana z Jenštejna, pražského arcibiskupa, který nechal postavit unikátní hradní kapli.</p>
+        <p><strong>1640:</strong> Během třicetileté války hrad vypálila švédská vojska a od té doby začal chátrat.</p>
+        <p><strong>18.-19. stol:</strong> Zřícenina sloužila jako obydlí pro chudinu, která si stavěla domky přímo v ruinách paláce.</p>
+        <p><strong>Současnost:</strong> Dnes je hrad chráněnou památkou. Rekonstruovaná 22m věž slouží jako rozhledna a muzeum.</p>
+      </div>
+
+      <h3>Poloha v rámci ČR</h3>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps?q=50.153494,14.6110949&z=10&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </aside>
+
+  <main class="viewer-area">
+    <div class="scene-title" id="sceneTitle">Načítání...</div>
+    <div id="panorama"></div>
+
+    <nav class="menu">
+      <button onclick="viewer.loadScene('front')">Zepředu</button>
+      <button onclick="viewer.loadScene('side')">Z boku</button>
+      <button onclick="viewer.loadScene('back')">Zezadu</button>
+      <button onclick="viewer.loadScene('top')">Zhora</button>
+    </nav>
+  </main>
+
+</body>
+</html>
