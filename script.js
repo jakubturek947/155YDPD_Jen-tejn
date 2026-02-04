@@ -13,22 +13,22 @@ const viewer = pannellum.viewer('panorama', {
     "front": {
       "title": "Zepředu",
       "type": "equirectangular",
-      "panorama": "data/front.jpg"
+      "panorama": "front.jpg"
     },
     "side": {
       "title": "Z boku",
       "type": "equirectangular",
-      "panorama": "data/side.jpg"
+      "panorama": "side.jpg"
     },
     "back": {
       "title": "Zezadu",
       "type": "equirectangular",
-      "panorama": "data/back.jpg"
+      "panorama": "back.jpg"
     },
     "top": {
       "title": "Zhora",
       "type": "equirectangular",
-      "panorama": "data/top.jpg"
+      "panorama": "top.jpg"
     }
   }
 });
@@ -39,5 +39,6 @@ function updateTitle() {
     document.getElementById('sceneTitle').innerText = viewer.getConfig().scenes[sceneId].title;
   }
 }
+
 
 viewer.on('load', updateTitle);
